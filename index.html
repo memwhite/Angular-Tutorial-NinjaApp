@@ -1,0 +1,20 @@
+<!-- ng-app & ng-model are called directives, they tell Angular to do something-->
+<!-- docs.angularjs.org/api/ng/directive/ngClassOdd   This is a list of directives-->
+<!-- the word model = data -->
+
+<!-- ng-app will apply angular to everything in the html tag-->
+
+
+<html lang="en" ng-app="myNinjaApp">
+  <head>
+    <title>TheNetNinja Angular Playlist</title>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/lib/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+  </head>
+  <body>
+    <header ng-include="'header.html'"></header>
+    <main ng-view></main>
+  </body>
+</html>
