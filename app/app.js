@@ -1,8 +1,11 @@
-//The module for the entire application you can see it calls the ngRoute and ngAnimate libraries 
+//The module for the entire application you can see it calls the ngRoute and ngAnimate libraries
 var myNinjaApp = angular.module('myNinjaApp', ['ngRoute', 'ngAnimate']);
 
 //config does things before everything loads
-myNinjaApp.config(['$routeProvider', function($routeProvider){
+myNinjaApp.config(['$routeProvider', '$locationProvider' function($routeProvider, $locationProvider){
+
+//this is needed to help set up pretty URLs 
+$locationProvider.html5Mode(true);
 
 //These are all the routes to different views
   $routeProvider
