@@ -1,4 +1,4 @@
-var myNinjaApp = angular.module('myNinjaApp', ['ngRoute']);
+var myNinjaApp = angular.module('myNinjaApp', ['ngRoute', 'ngAnimate']);
 
 //config does things before everything loads
 myNinjaApp.config(['$routeProvider', function($routeProvider){
