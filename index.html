@@ -8,14 +8,21 @@
 <html lang="en" ng-app="myNinjaApp">
   <head>
     <title>TheNetNinja Angular Playlist</title>
+<!--link to the CSS file-->
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+<!--link to the angular.min.js file-->
     <script src="app/lib/angular.min.js"></script>
+<!--link to the angular-route.min.js file, which allows us to route with Angular-->
     <script src="app/lib/angular-route.min.js"></script>
+<!--link to the angular-animate.min.js file, which allows us access to the animate library-->
     <script src="app/lib/angular-animate.min.js"></script>
+<!--link to the app.js file, which has the guts of the app-->
     <script src="app/app.js"></script>
   </head>
   <body>
+<!--this calls the header.html file to load here-->
     <header ng-include="'header.html'"></header>
+<!--this tells us this is where you load the views files -->
     <main ng-view></main>
   </body>
 </html>

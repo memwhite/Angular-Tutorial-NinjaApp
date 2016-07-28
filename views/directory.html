@@ -1,21 +1,29 @@
 <div class="content">
+<!--this button will put the ninjas in order alphabetically by name-->
     <button ng-click="order = 'name'">Order by Name</button>
+<!--this button will put the ninjas in order alphabetically by belt color-->
     <button ng-click="order = 'belt'">Order by Belt</button>
+<!--this input will search the list of ninjas based on what you type in-->
     <input type="text" ng-model="search" placeholder="Search for a ninja"/>
     <ul id="ninja-list">
       <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
+<!--this adds thumbnail pics of the ninjas next to their names-->
         <img ng-src="{{ninja.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px;"
             ng-show="ninja.thumb"/>
+<!--this shows the rate the ninjas charge in the form of currency-->
         <h3>{{ninja.name}} - {{ninja.rate | currency}}</h3>
+<!--this is the x where you click to remove ninjas...the function that it calls to do it is in app.js file-->
         <div class= "remove" ng-click="removeNinja(ninja)">x</div>
         <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt </span>
       </li>
     </ul>
+<!--this is the form where you add your own ninjas to the list-->
     <form ng-submit="addNinja()">
       <input type="text" placeholder="name" ng-model="newninja.name" />
       <input type="text" placeholder="belt" ng-model="newninja.belt" />
       <input type="text" placeholder="rate" ng-model="newninja.rate" />
       <input type="submit" value="Add new ninja" />
     </form>
+<!--this is the link you click to remove all ninjas on the list -->
     <a href="" ng-click="removeAll()">Remove all ninjas</a>
   </div>
