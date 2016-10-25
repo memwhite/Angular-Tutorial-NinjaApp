@@ -2,9 +2,9 @@
 var myNinjaApp = angular.module('myNinjaApp', ['ngRoute', 'ngAnimate']);
 
 //config does things before everything loads
-myNinjaApp.config(['$routeProvider', '$locationProvider' function($routeProvider, $locationProvider){
+myNinjaApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 
-//this is needed to help set up pretty URLs 
+//this is needed to help set up pretty URLs
 $locationProvider.html5Mode(true);
 
 //These are all the routes to different views
